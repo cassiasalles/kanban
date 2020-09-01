@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title id='Description'>Kanban Board</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.riccardotartaglia.it/jkanban/dist/jkanban.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="col-md-12">
+        <h1>Hello, World!</h1>
+        <h2>Bem-vindo (a) ao meu kanban!</h2>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="myKanban"></div>
+                <button class="btn btn-success"  id="addDefault">Crie um novo board</button>
+                <button class="btn btn-success" id="addToDo">Adicione um card em "To Do" board</button>
+                <button class="btn btn-danger" type="button" data-toggle="modal" data-target="#myModal">Remova um board</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal list boards -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Dê um duplo click no board que deseja apagar</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="list-group" id="myList"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal elements -->
+    <div class="modal fade" id="myModalElements" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Renomeie a atividade</h4>
+                </div>
+                <div class="modal-body">
+                    <input type="text" class="form-control" id="inputElement">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary" id="saveChange">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal elements -->
+    <div class="modal fade" id="myModalNewBoard" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Crie um novo board</h4>
+                </div>
+                <div class="modal-body">
+                    <input type="text" class="form-control" id="inputNewBoard" placeholder="Digite o nome do board">
+                    <input type="text" class="form-control margin-top-12" id="inputNewBoardId" placeholder="Digite o ID do board">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary" id="newBoard">Salvar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://gitcdn.xyz/repo/riktar/jkanban/master/dist/jkanban.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+<script src="script.js"></script>
+
+</html>
